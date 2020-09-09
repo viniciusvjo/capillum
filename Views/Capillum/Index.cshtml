@@ -1,0 +1,55 @@
+@model IEnumerable<Capillum.Models.Servico>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Serviços</h1>
+
+<p>
+    <a asp-action="Create">Inserir</a>
+</p>
+
+<form asp-controller="Capillum" asp-action="Index" method="get">
+    <p>
+        Descrição: <input type="text" name="SearchString">
+        <input type="submit" value="Filter"/> 
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempoMedio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoMedio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempoMedio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecoMedio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
