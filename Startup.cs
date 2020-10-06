@@ -28,7 +28,7 @@ namespace Capillum
             services.AddControllersWithViews();
 
             services.AddDbContext<CapillumContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("CapillumContext")));
+            options.UseMySql("Server=localhost; Database=Capillum; User=root; Password=bwv&1052bach;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

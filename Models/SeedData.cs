@@ -25,28 +25,28 @@ namespace Capillum.Models
                     {
                         Descricao = "Corte Feminino",
                         TempoMedio = 30,
-                        PrecoMedio = 35.00M
+                        PrecoMedio = 35.00
                     },
 
                     new Servico
                     {
                         Descricao = "Corte Masculino",
                         TempoMedio = 15,
-                        PrecoMedio = 15.50M
+                        PrecoMedio = 15.50
                     },
 
                     new Servico
                     {
                         Descricao = "Plástico de Fios",
                         TempoMedio = 120,
-                        PrecoMedio = 100.00M
+                        PrecoMedio = 100.00
                     },
 
                     new Servico
                     {
                         Descricao = "Mechas",
                         TempoMedio = 90,
-                        PrecoMedio = 60.00M
+                        PrecoMedio = 60.00
                     }
                 );
                 context.SaveChanges();
